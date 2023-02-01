@@ -15,3 +15,6 @@ echo "Backup dir is $BACKUP_DIRECTORY/$DATE.sql"
 echo "Pushing backup aws s3 cp $BACKUP_DIRECTORY/$DATE.sql s3://backup-everyday/$SERVICE_NAME/"
 /usr/local/bin/aws s3 cp $BACKUP_DIRECTORY/$DATE.sql s3://backup-everyday/$SERVICE_NAME/
 echo "Pushed done !"
+echo "Removing backup in local"
+rm $BACKUP_DIRECTORY/$DATE.sql
+echo "Remove done"
