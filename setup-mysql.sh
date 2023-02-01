@@ -22,6 +22,12 @@ if [ $? -ne 0 ]; then
 	return
 fi
 
+check_installed "aws"
+if [ $? -ne 0 ]; then
+	chmod +x ./install-aws.sh && ./install-aws.sh
+fi
+
+aws configure
 chmod +x ./backup-mysql.sh
 
 pwd=$(pwd)
