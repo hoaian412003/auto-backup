@@ -39,8 +39,9 @@ chmod +x ./backup-mongodb.sh
 pwd=$(pwd)
 echo "Pushing command to cron job"
 crontab -l > mycron
-echo "0 0 * * * $pwd/backup-mysql.sh >> $pwd/log" >> mycron
+echo "0 0 * * * $pwd/backup-mongodb.sh >> $pwd/log" >> mycron
 crontab mycron
 rm mycron
 echo "Pushed command to cron job"
+touch $pwd/log
 echo "Log file is: $pwd/log"
