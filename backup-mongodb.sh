@@ -14,7 +14,7 @@ for db in $DATABASE; do
 	SaveDir="$BACKUP_DIRECTORY/$DATE/$db"
 	echo "Starting backup databse $db ..."
 	mkdir -p "$BACKUP_DIRECTORY/$DATE"
-	mongodump --db $db --out SaveDir --username $MONGO_USER --password $MONGO_PASSWORD
+	mongodump --db $db --out $SaveDir --username $MONGO_USER --password $MONGO_PASSWORD
 	echo "Backup done and save in $SaveDir"
 	echo "Ziping SaveDir"
 	zip -r "$SaveDir.zip" "$SaveDir"
