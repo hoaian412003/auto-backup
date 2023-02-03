@@ -24,3 +24,6 @@ for db in $DATABASE; do
 	/usr/local/bin/aws s3 cp $SaveDir s3://backup-everyday/$SERVICE_NAME/
 	echo "Pushed done !"
 done
+echo "Removing folder backup"
+rm -r $BACKUP_DIRECTORY
+echo "Remove done"
