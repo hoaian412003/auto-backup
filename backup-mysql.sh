@@ -1,7 +1,7 @@
 #!/bin/bash
 
-MYSQL_USER="admin"
-MYSQL_PASSWORD="n#5v%1^81aLL^@xR"
+MYSQL_USER=""
+MYSQL_PASSWORD=""
 BACKUP_DIRECTORY="$(pwd)/backup"
 DATE=$(date +"%Y-%m-%d")
 PWD=$(pwd)
